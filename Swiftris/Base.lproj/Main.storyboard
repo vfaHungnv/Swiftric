@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="HuCaTetris" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4I-7f-LFi">
+                                <rect key="frame" x="265" y="116" width="90" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cF-NT-AYN">
+                                        <rect key="frame" x="20" y="8" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="0.13333333333333333" green="0.6470588235294118" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hc-Q6-sej">
+                                        <rect key="frame" x="16" y="37" width="58.5" height="48"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="35"/>
+                                        <color key="textColor" red="0.1333333333" green="0.64705882349999999" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3cF-NT-AYN" firstAttribute="top" secondItem="x4I-7f-LFi" secondAttribute="top" constant="8" id="8hZ-mK-Bxe"/>
+                                    <constraint firstAttribute="width" constant="90" id="Dda-SN-CBt"/>
+                                    <constraint firstItem="9hc-Q6-sej" firstAttribute="top" secondItem="3cF-NT-AYN" secondAttribute="bottom" constant="8" id="bsG-kv-f31"/>
+                                    <constraint firstAttribute="width" secondItem="x4I-7f-LFi" secondAttribute="height" multiplier="1:1" id="j2O-KV-9uR"/>
+                                    <constraint firstItem="9hc-Q6-sej" firstAttribute="centerX" secondItem="x4I-7f-LFi" secondAttribute="centerX" id="jus-Nu-73p"/>
+                                    <constraint firstItem="3cF-NT-AYN" firstAttribute="centerX" secondItem="x4I-7f-LFi" secondAttribute="centerX" id="uAp-1C-1Sn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJh-tg-IZA">
+                                <rect key="frame" x="265" y="256" width="90" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciW-WT-6oR">
+                                        <rect key="frame" x="24" y="8" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="0.54509803921568623" green="0.45490196078431372" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJM-lo-emm">
+                                        <rect key="frame" x="16" y="37" width="58.5" height="48"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="35"/>
+                                        <color key="textColor" red="0.5450980392" green="0.4549019608" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ciW-WT-6oR" firstAttribute="centerX" secondItem="uJh-tg-IZA" secondAttribute="centerX" id="DXc-KT-4y0"/>
+                                    <constraint firstItem="lJM-lo-emm" firstAttribute="top" secondItem="ciW-WT-6oR" secondAttribute="bottom" constant="8" id="MMx-Rp-dII"/>
+                                    <constraint firstItem="lJM-lo-emm" firstAttribute="centerX" secondItem="uJh-tg-IZA" secondAttribute="centerX" id="ODo-b7-BQ3"/>
+                                    <constraint firstAttribute="width" secondItem="uJh-tg-IZA" secondAttribute="height" multiplier="1:1" id="hld-BC-4xX"/>
+                                    <constraint firstAttribute="width" constant="90" id="n1V-9C-Thm"/>
+                                    <constraint firstItem="ciW-WT-6oR" firstAttribute="top" secondItem="uJh-tg-IZA" secondAttribute="top" constant="8" id="qPM-5g-yg0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="x4I-7f-LFi" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="116" id="GOK-pO-cf3"/>
+                            <constraint firstAttribute="trailing" secondItem="x4I-7f-LFi" secondAttribute="trailing" constant="20" id="MRD-2L-qbI"/>
+                            <constraint firstAttribute="trailing" secondItem="uJh-tg-IZA" secondAttribute="trailing" constant="20" id="UYf-MP-mf4"/>
+                            <constraint firstItem="uJh-tg-IZA" firstAttribute="top" secondItem="x4I-7f-LFi" secondAttribute="bottom" constant="50" id="rsv-I2-AZ9"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SbZ-mA-Mad" appends="YES" id="Hda-Gc-gLf"/>
+                            <outletCollection property="gestureRecognizers" destination="7HR-4i-EPm" appends="YES" id="7S2-k1-EC3"/>
+                            <outletCollection property="gestureRecognizers" destination="ly7-uV-Nji" appends="YES" id="OjY-dd-URr"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="lblLevel" destination="lJM-lo-emm" id="cdG-La-Qtm"/>
+                        <outlet property="lblScore" destination="9hc-Q6-sej" id="r4E-80-YiD"/>
+                        <outlet property="vLevel" destination="uJh-tg-IZA" id="VTP-G6-BGo"/>
+                        <outlet property="vScore" destination="x4I-7f-LFi" id="IXa-so-Uc4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SbZ-mA-Mad">
+                    <connections>
+                        <action selector="didTick:" destination="BV1-FR-VrT" id="nRH-3A-Awc"/>
+                        <outlet property="delegate" destination="BV1-FR-VrT" id="rXa-TX-XhU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7HR-4i-EPm">
+                    <connections>
+                        <action selector="didPan:" destination="BV1-FR-VrT" id="jrV-dU-7Wb"/>
+                    </connections>
+                </panGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="ly7-uV-Nji">
+                    <connections>
+                        <action selector="didSwipe:" destination="BV1-FR-VrT" id="96s-Sh-RAN"/>
+                        <outlet property="delegate" destination="BV1-FR-VrT" id="tCF-yY-jYD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="33.75" y="32.5"/>
+        </scene>
+    </scenes>
+</document>

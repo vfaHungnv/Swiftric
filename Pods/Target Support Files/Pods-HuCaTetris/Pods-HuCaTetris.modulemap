@@ -1,0 +1,6 @@
+framework module Pods_HuCaTetris {
+  umbrella header "Pods-HuCaTetris-umbrella.h"
+
+  export *
+  module * { export * }
+}
