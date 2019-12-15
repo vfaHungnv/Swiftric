@@ -52,11 +52,11 @@ class AnalyticsHelper: NSObject {
     
     //MARK:- Firebase analytic
     func setFirebaseAnalytic(screenName: String, screenClass: String) {
-        FIRAnalytics.setScreenName(screenName, screenClass: screenClass)
+        Analytics.setScreenName(screenName, screenClass: screenClass)
     }
     
     func sendFirebaseAnalytic(event: String, category: String, action: String, label: String) {
-        FIRAnalytics.logEvent(withName: event, parameters: [
+        Analytics.logEvent(event, parameters: [
             "Category": category as NSObject,
             "Action": action as NSObject,
             "Label": label as NSObject

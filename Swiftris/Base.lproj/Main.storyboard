@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,16 +12,12 @@
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="HuCaTetris" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
-                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
-                    </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4I-7f-LFi">
-                                <rect key="frame" x="265" y="116" width="90" height="90"/>
+                                <rect key="frame" x="304" y="160" width="90" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cF-NT-AYN">
                                         <rect key="frame" x="20" y="8" width="50" height="21"/>
@@ -49,7 +43,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJh-tg-IZA">
-                                <rect key="frame" x="265" y="256" width="90" height="90"/>
+                                <rect key="frame" x="304" y="300" width="90" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciW-WT-6oR">
                                         <rect key="frame" x="24" y="8" width="42" height="21"/>
@@ -78,11 +72,12 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="x4I-7f-LFi" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="116" id="GOK-pO-cf3"/>
-                            <constraint firstAttribute="trailing" secondItem="x4I-7f-LFi" secondAttribute="trailing" constant="20" id="MRD-2L-qbI"/>
-                            <constraint firstAttribute="trailing" secondItem="uJh-tg-IZA" secondAttribute="trailing" constant="20" id="UYf-MP-mf4"/>
+                            <constraint firstItem="x4I-7f-LFi" firstAttribute="top" secondItem="cpg-vf-siN" secondAttribute="top" constant="116" id="GOK-pO-cf3"/>
+                            <constraint firstItem="cpg-vf-siN" firstAttribute="trailing" secondItem="x4I-7f-LFi" secondAttribute="trailing" constant="20" id="MRD-2L-qbI"/>
+                            <constraint firstItem="cpg-vf-siN" firstAttribute="trailing" secondItem="uJh-tg-IZA" secondAttribute="trailing" constant="20" id="UYf-MP-mf4"/>
                             <constraint firstItem="uJh-tg-IZA" firstAttribute="top" secondItem="x4I-7f-LFi" secondAttribute="bottom" constant="50" id="rsv-I2-AZ9"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="cpg-vf-siN"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="SbZ-mA-Mad" appends="YES" id="Hda-Gc-gLf"/>
                             <outletCollection property="gestureRecognizers" destination="7HR-4i-EPm" appends="YES" id="7S2-k1-EC3"/>
